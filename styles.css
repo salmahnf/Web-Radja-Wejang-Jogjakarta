@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url("assets/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.left img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.right {
+  width: 50%;
+  padding: 20px;
+}
+
+.right h1 {
+  font-size: 47px;
+  font-weight: 1000;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.right p {
+  color: #1a1a1a;
+  font-size: 16px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.right p .highlight {
+  color: #f56b41;
+  font-weight: 600;
+}
+
+.code-input {
+  display: flex;
+  align-items: center;
+}
+
+.code-input input {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #e4924b;
+  border-radius: 10px;
+  width: 250px;
+  color: #888;
+  outline: none;
+}
+
+.code-input input::placeholder {
+  color: #aaa;
+}
+
+.code-input button {
+  background-color: #e4924b;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.code-input button:hover {
+  background-color: #e05e37;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+
+.social-media a {
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+}
+
+.social-media a img {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
