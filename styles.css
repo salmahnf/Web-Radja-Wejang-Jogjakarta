@@ -16,10 +16,48 @@ body {
   height: 100vh;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 70px;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 1000; 
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin-top: -35px;
+}
+
+.login span {
+  margin-right: 5px;
+}
+
+.user-icon {
+  width: 35px;
+  height: auto;
+  padding: 4px;
+}
+
+
 .container {
   display: flex;
   align-items: center;
   padding: 20px;
+  
 }
 
 .left {
@@ -39,16 +77,17 @@ body {
 }
 
 .right h1 {
-  font-size: 47px;
+  font-size: 35px;
   font-weight: 1000;
   color: #1a1a1a;
   margin-bottom: 15px;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke: 1px #000
 }
 
 .right p {
   color: #1a1a1a;
-  font-size: 16px;
+  font-size: 13px;
   margin-bottom: 25px;
   font-weight: 500;
 }
@@ -65,12 +104,14 @@ body {
 
 .code-input input {
   padding: 10px 15px;
-  font-size: 16px;
+  font-size: 12px;
   border: 2px solid #e4924b;
   border-radius: 10px;
   width: 250px;
+  height: 34px;
   color: #888;
   outline: none;
+  font-family: "Montserrat", sans-serif;
 }
 
 .code-input input::placeholder {
@@ -82,11 +123,18 @@ body {
   color: white;
   border: none;
   padding: 10px 25px;
-  font-size: 16px;
+  font-size: 12px;
   border-radius: 10px;
   cursor: pointer;
   margin-left: 10px;
+  height: 34px;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  font-family: "Montserrat", sans-serif; 
+  font-weight: 600;
 }
+
 
 .code-input button:hover {
   background-color: #e05e37;
@@ -106,32 +154,221 @@ body {
 footer {
   width: 100%;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
   position: absolute;
   bottom: 0;
   left: 0;
   background-color: transparent;
-  font-size: 16px;
+  font-size: 12px;
+  margin-bottom: 35px;
 }
 
 .social-media {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 70px;
+  gap: 30px; 
 }
 
 .social-media a {
+  font-size: 10px; 
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  font-weight: 700; 
+}
+
+.social-media a img {
+  width: 10px; 
+  height: 10px;
+  margin-right: 3px; 
+}
+
+
+/* #2 page login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.login-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px; 
+  padding: 20px; 
+  height: 350px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  margin-bottom:40px;
+  
+  
+}
+
+.login-card label {
+  font-size: 12px;
+  color: #575656;
+  font-weight: 600;
+
+}
+
+.login-card h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  text-align: left;
+}
+
+.input-group input {
+  width: 100%;
+  padding-left: 40px; 
+  border: 1px solid #cfcac6;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  outline: none;
+  height: 40px; 
+}
+
+.icon-inside {
+  position: absolute;
+  left: 10px;
+  width: 13px; 
+  height: 15px;
+  margin-left: 5px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.input-group input::placeholder {
+  font-weight: bold; 
+  color: #adacac; 
+  font-size:12px;
+}
+
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 16px;  
+  height: 16px;
+}
+
+.forgot-password {
+  text-align: right;
+  font-size: 10px;
+  color: #e05e37;
+  text-decoration: none;
+  margin-bottom: 5px;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.forgot-password:hover {
+  color: #d14c24;
+}
+
+
+.login-button {
+  background-color: #e4924b;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+.login-button:hover {
+  background-color: #e05e37;
+}
+
+.no-account {
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom:30px;
+  font-size: 10px;
+  
+}
+
+.no-account a {
+  color: #e05e37;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.no-account a:hover {
+  text-decoration: underline;
+}
+
+.footer-glassy {
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  border-radius: 15px; 
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 5px 20px;
+  width: 90%; 
+  max-width: 1200px; 
+  height: 35px; 
+  position: fixed;
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-glassy .social-media {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 30px;
+}
+
+.footer-glassy .social-media a {
   font-size: 12px;
   text-decoration: none;
   color: black;
   display: flex;
   align-items: center;
-  font-weight: 900;
+  font-weight: 700;
 }
 
-.social-media a img {
-  width: 15px;
-  height: 15px;
+.footer-glassy .social-media a img {
+  width: 18px;
+  height: 18px;
   margin-right: 5px;
 }
+
+
+// #3 popup
