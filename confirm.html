@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Confirmation</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -19,33 +19,15 @@
 
     <div class="login-container">
         <div class="login-card">
-            <h1>Login</h1>
-            <form action="#" method="POST">
-                <label for="email">Email</label>
-                <div class="input-group">
-                    <input type="email" id="email" placeholder="example@gmail.com" required />
-                    <img src="assets/kunci.png" alt="Lock Icon" class="icon-inside">
-                </div>
-                
-    
-                <label for="password">Password</label>
-                <div class="input-group">
-                    <img src="assets/kunci.png" alt="Lock Icon" class="icon-inside">
-                    <input type="password" id="password" placeholder="password123" required />
-                    <img src="assets/mata.png" alt="Eye Icon" class="toggle-password">
-                </div>
-    
-                <a href="#" id="forgotPasswordLink" class="forgot-password">Lupa password</a>
-    
-                <button type="submit" class="login-button">Login</button>
-    
-                <p class="no-account">
-                    Tidak punya akun? <a href="#">Hubungi kami.</a>
-                </p>
-            </form>
+            <img src="assets/confirm.png" alt="Confirmation Icon" class="modal-icon">
+            <h2>Confirmation Sent</h2>
+            <p class="cek">Cek emailmu dan ikuti petunjuk yang ada pada halaman email.</p>
+            <button class="modal-button">Selesai</button>
+            <a href="#" class="modal-resend">Kirim ulang</a>
         </div>
     </div>
 
+    <!-- Footer Section -->
     <footer class="footer-glassy">
         <div class="social-media">
             <a href="https://www.instagram.com/radjawedang_id" target="_blank">
@@ -57,6 +39,5 @@
             </a>
         </div>
     </footer>
-
 </body>
 </html>
