@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rahmat Tour - Aneka Bakpia</title>
+    <link rel="stylesheet" href="styles2.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function toggleSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        const icon = document.getElementById("icon-" + sectionId);
+
+        if (section.style.display === "none" || section.style.display === "") {
+          section.style.display = "grid"; // Tampilkan dalam bentuk grid
+          icon.textContent = "-"; // Ubah ikon menjadi -
+        } else {
+          section.style.display = "none"; // Sembunyikan section
+          icon.textContent = "+"; // Ubah ikon menjadi +
+        }
+      }
+    </script>
+  </head>
+  <body style="background-image: url('assets/checkoutBg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="container">
+      <!-- Header -->
+      <header class="main-header">
+        <div class="logo-container">
+          <a href="#"
+            ><img src="assets/logo.png" alt="Radja Wejang Logo" class="logo"
+          /></a>
+          <div class="button-container">
+            <button class="keranjang-button">
+              History Order
+              <img src="assets/akar-icons_shopping-bag.png" alt="Cart Icon" class="cart-icon" />
+            </button>
+            <button class="keranjang-button">
+                + Add Oleh"
+                <img src="assets/cart1.png" alt="Cart Icon" class="cart-icon" />
+              </button>
+              <button class="keranjang-button">
+                +Add kategori
+                <img src="assets/cart1.png" alt="Cart Icon" class="cart-icon" />
+              </button>
+          </div>
+        </div>
+        <div class="user-info">
+          <a href="dashboard.html" class="dashboard-link">Dashboard</a>
+          <span>Rahmat Tour</span>
+          <img src="assets/userLogo.png" alt="User Icon" class="user-icon" />
+        </div>
+      </header>
+      
+      
+      <!-- Section Aneka Bakpia -->
+      <div class="section">
+        <h2 class="section-title" onclick="toggleSection('bakpia')">
+          Aneka Bakpia <span class="toggle-icon" id="icon-bakpia">+</span>
+        </h2>
+        <div class="product-list" id="bakpia">
+            <div class="product-card">
+                <img src="assets/bakpiaRadja.jpg" alt="Bakpia Pathok Radja" class="product-image" />
+                <div class="product-content">
+                  <div class="product-details">
+                    <div class="product-name">Bakpia Pathok Radja</div>
+                    <div class="product-variant">Varian: Kacang Hijau</div>
+                    <div class="product-quantity">Isi: 20</div>
+                    <div class="product-price">Rp. 40.000,-</div>
+                  </div>
+                  <div class="product-options">
+                    <select>
+                      <option>Kacang Hijau</option>
+                    </select>
+                    <input type="number" class="quantity-input" value="1" min="1" />
+                    <button class="add-to-cart-button"><img src="assets/cart1.png" alt="Cart Icon" class="cart-icon" /></button>
+                    <!-- Trash Button -->
+                    <button class="trash-button">
+                      <img src="assets/trash.png" alt="Trash Icon" class="trash-icon" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+  
+  
+          <!-- Card Produk 2 -->
+          <div class="product-card">
+            <img src="assets/bakpiaTugu.jpg" alt="Bakpia Tugu" />
+            <div class="product-details">
+              <div class="product-name">Bakpia Tugu</div>
+              <div class="product-variant">Varian: Original, Coklat, dll</div>
+              <div class="product-quantity">Isi: 10</div>
+              <div class="product-price">Rp. 45.000,-</div>
+              <div class="product-options">
+                <select>
+                  <option>Original</option>
+                  <option>Coklat</option>
+                </select>
+                <input type="number" class="quantity-input" value="1" min="1" />
+                    <button class="add-to-cart-button"><img src="assets/cart1.png" alt="Cart Icon" class="cart-icon" /></button>
+                    <!-- Trash Button -->
+                    <button class="trash-button">
+                      <img src="assets/trash.png" alt="Trash Icon" class="trash-icon" />
+                    </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Produk 3 -->
+          <div class="product-card">
+            <img src="assets/bakpiaTape.jpg" alt="Bakpia Tape Jogja" />
+            <div class="product-details">
+              <div class="product-name">Bakpia Tape Jogja</div>
+              <div class="product-variant">Varian: Original, Keju, dll</div>
+              <div class="product-quantity">Isi: 9</div>
+              <div class="product-price">Rp. 30.000,-</div>
+              <div class="product-options">
+                <select>
+                  <option>Original</option>
+                  <option>Keju</option>
+                </select>
+                <input type="number" class="quantity-input" value="1" min="1" />
+                    <button class="add-to-cart-button"><img src="assets/cart1.png" alt="Cart Icon" class="cart-icon" /></button>
+                    <!-- Trash Button -->
+                    <button class="trash-button">
+                      <img src="assets/trash.png" alt="Trash Icon" class="trash-icon" />
+                    </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Aneka Keripik -->
+      <div class="section">
+        <h2 class="section-title" onclick="toggleSection('keripik')">
+          Aneka Keripik <span class="toggle-icon" id="icon-keripik">+</span>
+        </h2>
+        <div class="product-list" id="keripik">
+          <!-- Contoh Kartu Produk Keripik -->
+          <div class="product-card">
+            <img src="assets/Keripik1.jpg" alt="Keripik Singkong" />
+            <div class="product-details">
+              <div class="product-name">Keripik Getuk Singkong</div>
+              <div class="product-quantity">Isi: 100 gr</div>
+              <div class="product-price">Rp. 15.000,-</div>
+              <div class="product-options">
+                <select>
+                  <option>Original</option>
+                  <option>Pedas</option>
+                </select>
+                <input type="number" class="quantity-input" value="1" min="1" />
+                    <button class="add-to-cart-button"><img src="assets/cart1.png" alt="Cart Icon" class="cart-icon" /></button>
+                    <!-- Trash Button -->
+                    <button class="trash-button">
+                      <img src="assets/trash.png" alt="Trash Icon" class="trash-icon" />
+                    </button>
+              </div>
+            </div>
+          </div>
+          <!-- Tambahkan produk lainnya di sini -->
+        </div>
+      </div>
+
+     
+  <footer class="footer-glassy">
+    <div class="social-media">
+      <a href="https://www.instagram.com/radjawedang_id" target="_blank">
+        <img src="assets/ig.png" alt="Instagram" />@radjawedang_id
+      </a>
+      <a href="https://www.instagram.com/radjawedang_official" target="_blank"
+        >@radjawedang_official</a
+      >
+      <a href="https://www.facebook.com/radjawedangstore" target="_blank">
+        <img src="assets/telp.png" alt="Phone" /> Radja Wedang Store
+      </a>
+    </div>
+  </footer>
+  <script>
+    let lastScrollY = window.scrollY;
+const navbarElements = document.querySelectorAll('.logo-container, .user-info');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+        // Saat scroll ke bawah, tambahkan kelas hidden-navbar
+        navbarElements.forEach(element => element.classList.add('hidden-navbar'));
+    } else {
+        // Saat scroll ke atas, hapus kelas hidden-navbar
+        navbarElements.forEach(element => element.classList.remove('hidden-navbar'));
+    }
+    lastScrollY = window.scrollY;
+});
+
+  </script>
+  </body>
+</html>

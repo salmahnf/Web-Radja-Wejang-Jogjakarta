@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Radja Wejang Jogjakarta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-image: url('assets/checkoutBg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></body>
+<header class="main-header">
+  <a href="#"><img src="assets/logo.png" alt="Radja Wejang Logo" class="logo"></a>
+  <div class="login">
+      <a href="dashboard.html" class="dashboard-link">Dashboard</a>
+      <span>Rahmat Tour</span>
+      <img src="assets/userLogo.png" alt="User Icon" class="user-icon">
+  </div>
+</header>
+
+
+    <div class="shopping-cart">
+      <div style="display: flex; align-items: center;">
+        <a href="previous-page.html" style="margin-right: 10px;">
+            <img src="assets/back.png" alt="Back Icon" style="width: 20px; height: auto; cursor: pointer;">
+        </a>
+        <h2 style="margin-top: 0; font-size: 24px; font-weight: 700; color: #1a1a1a;">Shopping Cart</h2>
+    </div>
+        
+        <div class="product-item">
+          <input type="checkbox">
+          <img src="assets/bakpiaTugu.png" alt="Product Image" class="product-image">
+          <div class="product-details">
+              <span class="product-name">Bakpia Tugu</span>
+              <select class="product-flavor">
+                  <option>Coklat</option>
+                  <option>Keju</option>
+              </select>
+          </div>
+          <div class="quantity-selector">
+              <button class="quantity-button">-</button>
+              <span>2</span>
+              <button class="quantity-button">+</button>
+          </div>
+          <span class="product-price">Rp. 80.000,-</span>
+          <img src="assets/trash.png" alt="Delete" class="delete-icon">
+      </div>
+      
+      <div class="product-item">
+        <input type="checkbox">
+        <img src="assets/bakpiaTugu.png" alt="Product Image" class="product-image">
+        <div class="product-details">
+            <span class="product-name">Bakpia Tugu</span>
+            <select class="product-flavor">
+                <option>Coklat</option>
+                <option>Keju</option>
+            </select>
+        </div>
+        <div class="quantity-selector">
+            <button class="quantity-button">-</button>
+            <span>2</span>
+            <button class="quantity-button">+</button>
+        </div>
+        <span class="product-price">Rp. 80.000,-</span>
+        <img src="assets/trash.png" alt="Delete" class="delete-icon">
+    </div>
+    
+      
+        <!-- Repeat Product Item as needed -->
+      
+        <div class="cart-footer">
+          <div class="select-all">
+            <input type="checkbox">
+            <label class="pilih">Pilih Semua</label>
+          </div>
+          <span class="total-price">Rp. 160.000,-</span>
+          <button class="checkout-button">checkout</button>
+        </div>
+      </div>
+      
+</html>
