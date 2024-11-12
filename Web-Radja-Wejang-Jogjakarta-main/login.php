@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <!-- Bootstrap source -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Style untuk alert floating -->
     <style>
         .alert-floating {
@@ -23,6 +24,7 @@
         }
     </style>
 </head>
+
 <body style="background-image: url('assets/loginBg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <header>
         <a href="#"><img src="assets/logo.png" alt="Radja Wejang Logo" class="logo"></a>
@@ -31,8 +33,10 @@
             <img src="assets/homeButton.png" alt="User Icon" class="user-icon">
         </div>
     </header>
+
     <!-- Notifikasi Alert Floating -->
     <div id="alert-container"></div>
+
     <div class="login-container">
         <div class="login-card">
             <h1>Login</h1>
@@ -42,12 +46,14 @@
                     <input type="text" id="username" name="username" placeholder="username" required>
                     <img src="assets/kunci.png" alt="Lock Icon" class="icon-inside">
                 </div>
+
                 <label for="password">Password</label>
                 <div class="input-group">
                     <img src="assets/kunci.png" alt="Lock Icon" class="icon-inside">
                     <input type="password" id="password" name="password" placeholder="password123" required>
                     <img src="assets/mata.png" alt="Eye Icon" class="toggle-password" onclick="togglepw()">
                 </div>
+
                 <!-- Script untuk toggle password visibility -->
                 <script>
                     function togglepw() {
@@ -55,12 +61,14 @@
                         passwordField.type = passwordField.type === 'password' ? 'text' : 'password';
                     }
                 </script>
+
                 <a href="#" class="forgot-password">Lupa password</a>
                 <button type="submit" class="login-button">Login</button>
                 <p class="no-account">Tidak punya akun? <a href="#">Hubungi kami.</a></p>
             </form>
         </div>
     </div>
+
     <footer class="footer-glassy">
         <div class="social-media">
             <a href="https://www.instagram.com/radjawedang_id" target="_blank"><img src="assets/ig.png" alt="Instagram">@radjawedang_id</a>
@@ -68,11 +76,13 @@
             <a href="https://www.facebook.com/radjawedangstore" target="_blank"><img src="assets/telp.png" alt="Phone"> Radja Wedang Store</a>
         </div>
     </footer>
+
     <!-- Script untuk menampilkan alert floating -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const urlParams = new URLSearchParams(window.location.search);
             const pesan = urlParams.get('pesan');
+
             // Fungsi untuk membuat alert
             function showAlert(type, message) {
                 const alertContainer = document.getElementById('alert-container');
@@ -86,6 +96,7 @@
                     alertContainer.innerHTML = '';
                 }, 3000);
             }
+
             // Menampilkan pesan berdasarkan URL parameter
             if (pesan === "gagal") {
                 showAlert('danger', 'Login gagal. Username atau password salah.');
@@ -96,6 +107,7 @@
             }
         });
     </script>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
