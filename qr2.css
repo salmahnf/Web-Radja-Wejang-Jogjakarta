@@ -1,0 +1,197 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f9d6d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.payment-container {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 900px;
+}
+
+.qr-section {
+  background-color: #e94d3c;
+  color: #ffffff;
+  padding: 30px;
+  width: 50%;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30px;
+  margin-bottom: 10px;
+}
+
+.qris-logo,
+.gpn-logo {
+  height: 40px;
+  max-width: 60px;
+  object-fit: contain;
+}
+
+.company-info {
+  text-align: center;
+}
+
+.company-info span {
+  display: block;
+  font-weight: 700;
+}
+
+.company-info p {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.qr-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+}
+
+.qr-code img {
+  width: 100%;
+  max-width: 220px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  position: relative;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  z-index: 1;
+  position: relative;
+}
+
+.button-left {
+  border-radius: 30px 30px 30px 30px;
+  background-color: #f9d6d0;
+  color: #e94d3c;
+  margin-right: -20px;
+  z-index: 2;
+}
+
+.button-right {
+  border-radius: 30px 30px 30px 30px;
+  background-color: #ffffff;
+  color: #e94d3c;
+  margin-left: -10px;
+  z-index: 1;
+}
+
+.buttons button.active {
+  background-color: #f9d6d0;
+  color: #e94d3c;
+}
+
+.buttons button:not(.active):hover {
+  background-color: #f2b0a0;
+}
+
+.details-section {
+  padding: 40px 30px;
+  width: 50%;
+}
+
+.details-section h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.success-icon {
+  font-size: 30px;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.status h2 {
+  font-size: 25px;
+  font-weight: 800;
+  margin: 5px 0;
+}
+
+.status p {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #4a4949;
+}
+
+.amount h1 {
+  color: #e94d3c;
+  text-align: center;
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.items {
+  width: 100%;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.items p {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.items hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.total {
+  font-weight: 700;
+  margin-top: 10px;
+  text-align: right;
+}
+.text-small {
+  font-size: 12px;
+  font-weight: 700;
+}
