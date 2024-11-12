@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembayaran QRIS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="qr2.css" />
+  </head>
+  <body>
+    <div class="payment-container">
+      <div class="qr-section">
+        <div class="header">
+          <div class="logo-section">
+            <img src="assets/qr.png" alt="QRIS Logo" class="qris-logo" />
+            <img src="assets/gpn.png" alt="GPN Logo" class="gpn-logo" />
+          </div>
+          <div class="company-info">
+            <span>PT. XXXXXXXXXX</span>
+            <p>NIMD: ID123456789</p>
+          </div>
+        </div>
+
+        <div class="qr-code">
+          <img src="assets/qris.png" alt="QR Code" />
+        </div>
+        <div class="buttons">
+          <button class="button-left active">SCAN QRIS</button>
+          <button class="button-right">KODE BAYAR</button>
+        </div>
+      </div>
+      <div class="details-section">
+        <h3>Payment Details</h3>
+        <div class="status">
+          <img
+            src="assets/loading.png"
+            alt="Payment Success"
+            class="success-icon"
+          />
+          <h2>Rahmat Tour</h2>
+          <p>A2038474739475</p>
+        </div>
+
+        <div class="amount">
+          <h1>Rp. 200.000</h1>
+        </div>
+        <div class="items">
+          <p class="text-small">Bakpia Tape <span>Rp. 80.000</span></p>
+          <p class="text-small">Bakpia Tugu <span>Rp. 90.000</span></p>
+          <hr />
+          <p class="total text-small">TOTAL <span>Rp. 90.000</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
