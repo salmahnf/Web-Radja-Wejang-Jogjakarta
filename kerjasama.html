@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radja Wedang Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo-section">
+            <div class="logo">
+                <img src="logo.png" alt="Radja Wedang Logo">
+            </div>
+            <span>RADJA WEDANG JOGJAKARTA</span>
+        </div>
+        
+        <div class="admin-section">
+            <div class="admin-profile">
+                <img src="profil.jpg" alt="Admin" class="admin-image">
+                <h3>Admin 1</h3>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <nav class="nav-links">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-th-large"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-box"></i>
+                    <span>Stok Produk</span>
+                </a>
+                <a href="#" class="nav-link active">
+                    <i class="fas fa-handshake"></i>
+                    <span>Kerjasama Tour</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-list"></i>
+                    <span>List Order</span>
+                </a>
+            </nav>
+            
+            <a href="#" class="nav-link logout-link">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Keluar</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="header">
+            <div>
+                <h1>Kerjasama Tour</h1>
+                <p>10 Desember 2024</p>
+            </div>
+            <div class="header-actions">
+                <input type="text" class="search-bar" placeholder="November">
+                <button class="add-button">
+                    <i class="fas fa-plus"></i>
+                    Tambah
+                </button>
+            </div>
+        </div>
+
+        <section>
+            <h2>Aktivitas Terakhir</h2>
+            <div class="recent-activities">
+                <div class="activity-card">
+                    <div class="activity-header">
+                        <div class="activity-logo"></div>
+                        <div>
+                            <h3>Rahmat Tour</h3>
+                            <p>DKI Jakarta</p>
+                        </div>
+                    </div>
+                    <p class="status">Active now</p>
+                    <p class="price">Rp 2.500.000</p>
+                    <a href="#" class="whatsapp-link">
+                        <i class="fab fa-whatsapp"></i>
+                        Whatsapp
+                    </a>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-header">
+                        <div class="activity-logo"></div>
+                        <div>
+                            <h3>Epic Escapes</h3>
+                            <p>Aceh</p>
+                        </div>
+                    </div>
+                    <p class="status">Active 5 hours ago</p>
+                    <p class="price">Rp 900.000</p>
+                    <a href="#" class="whatsapp-link">
+                        <i class="fab fa-whatsapp"></i>
+                        Whatsapp
+                    </a>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-header">
+                        <div class="activity-logo"></div>
+                        <div>
+                            <h3>Dreamscapes Travel</h3>
+                            <p>DI Yogyakarta</p>
+                        </div>
+                    </div>
+                    <p class="status">Active 3 minutes ago</p>
+                    <p class="price">Rp 1.500.000</p>
+                    <a href="#" class="whatsapp-link">
+                        <i class="fab fa-whatsapp"></i>
+                        Whatsapp
+                    </a>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-header">
+                        <div class="activity-logo"></div>
+                        <div>
+                            <h3>Odyssey Expeditions</h3>
+                            <p>Sidoarjo</p>
+                        </div>
+                    </div>
+                    <p class="status">Active 2 days ago</p>
+                    <p class="price">Rp 300.000</p>
+                    <a href="#" class="whatsapp-link">
+                        <i class="fab fa-whatsapp"></i>
+                        Whatsapp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="member-list-container">
+            <h2 class="section-title">List Anggota</h2>
+            <div class="member-list">
+                <div class="member-header">
+                    <div>Nama</div>
+                    <div>Aktivitas</div>
+                    <div>Level Keaktifan</div>
+                    <div>Total Penghasilan</div>
+                    <div>Barang Terjual</div>
+                    <div>Kontak</div>
+                </div>
+
+            <div class="member-row">
+                <div class="member-info">
+                    <div class="activity-logo"></div>
+                    <div>
+                        <h3>Rahmat Tour</h3>
+                        <p>DKI Jakarta</p>
+                    </div>
+                </div>
+                <div class="status">Active now</div>
+                <div>Sangat aktif</div>
+                <div>Rp 2.500.000</div>
+                <div>20</div>
+                <div>
+                    <a href="#" class="whatsapp-link">
+                        <i class="fab fa-whatsapp"></i>
+                        Whatsapp
+                    </a>
+                </div>
+            </div>
+
+            <div class="member-row">
+                <div class="member-info">
+                    <div class="activity-logo"></div>
+                    <div>
+                        <h3>Plusstrip</h3>
+                        <p>Aceh</p>
+                    </div>
+                </div>
+                <div class="status">Active now</div>
+                <div>Aktif</div>
+                <div>Rp 200.000</div>
+                <div>10</div>
+                <div>
+                    <a href="#" class="whatsapp-link">
+                        <i class="fab fa-whatsapp"></i>
+                        Whatsapp
+                    </a>
+                </div>
+            </div>
+
+            <div class="member-row">
+                <div class="member-info">
+                    <div class="activity-logo"></div>
+                    <div>
+                        <h3>Sunnamplex</h3>
+                        <p>DKI Jakarta</p>
+                    </div>
+                </div>
+                <div>2 days ago</div>
+                <div>Jarang aktif</div>
+                <div>Rp 5.573.000</div>
+                <div>50</div>
+                <div>
+                    <a href="#" class="whatsapp-link">
+                        <i class="fab fa-whatsapp"></i>
+                        Whatsapp
+                    </a>
+                </div>
+            </div>
+
+            <div class="member-row">
+                <div class="member-info">
+                    <div class="activity-logo"></div>
+                    <div>
+                        <h3>Sumace</h3>
+                        <p>Malang</p>
+                    </div>
+                </div>
+                <div class="inactive">1 years ago</div>
+                <div class="inactive">Tidak aktif</div>
+                <div>Rp 50.000</div>
+                <div>2</div>
+                <div>
+                    <a href="#" class="whatsapp-link">
+                        <i class="fab fa-whatsapp"></i>
+                        Whatsapp
+                    </a>
+                </div>
+            </div>
+        </section>
