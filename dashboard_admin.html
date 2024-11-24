@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Order - Radja Wedang Jogjakarta</title>
+  <link rel="stylesheet" href="stylelist.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Logo Section -->
+      <div class="logo">
+        <img src="assets/logo.png" alt="Radja Wedang Logo">
+        <h2>RADJA WEDANG<br><span>JOGJAKARTA</span></h2>
+      </div>
+
+      <!-- Profile Section -->
+      <div class="profile">
+        <img src="assets/tara.jpg" alt="Admin Profile">
+        <p>Admin 1</p>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul>
+          <li class="active"><a href="#"><img src="assets/dashboard - icon.png" alt="Dashboard Icon"> Dashboard</a></li>
+          <li><a href="#"><img src="assets/stok produk-icon.png" alt="Stok Produk Icon"> Stok Produk</a></li>
+          <li><a href="#"><img src="assets/kerjasama-icon.png" alt="Kerjasama Icon"> Kerjasama Tour</a></li>
+          <li><a href="#"><img src="assets/list order - icon.png" alt="List Order Icon"> List Order</a></li>
+        </ul>
+      </nav>
+
+      <!-- Logout Button -->
+      <a href="#" class="logout">
+        <img src="assets/keluar.png" alt="Logout Icon"> Keluar</a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" style="background-color: #ffff;">
+        <header>
+          <div class="header-left">
+            <h1>Dashboard</h1>
+            <p>10 Desember 2024</p>
+          </div>
+          <div class="search-bar">
+            <input type="text" placeholder="November" id="search-input" style = "border: 1px solid #F9D6CE;">
+            <button id="search-btn">
+              <img src="assets/search-alt-2.png" alt="Cari">Cari
+            </button>
+          </div>
+        </header>
+      
+        <div class="content-grid">
+          <!-- Kolom Kiri -->
+          <section class="left-section">
+            <div class="overview-grid">
+                <div class="left-section">
+                  <div class="card small">
+                    <h3>Total Penghasilan</h3>
+                    <p class="value">Rp 10.000.000 <span class="box">+10%</span></p>
+                  </div>
+                  <div class="card small">
+                    <h3>Anggota Kerjasama</h3>
+                    <p class="value">20 <span class="box">+1</span></p>
+                  </div>
+                </div>
+                <div class="card progress">
+                  <h3>Stock Produk</h3>
+                  <div class="progress-circle">
+                    <p>75%</p>
+                  </div>
+                </div>
+              </div>
+              
+              <section class="latest-orders">
+                <h2>Pesanan Terbaru</h2>
+                <div class="order" style="color: #000;">
+                  <img src="assets/rahmat.png" alt="Rahmat Tour Logo">
+                  <div class="text">
+                    <p style="color: #000;">Rahmat Tour <small style="color: #000;">5 Orders</small></p>
+                  </div>
+                  <span style="color: #000;">Rp 5.000.000</span>
+                </div>
+                <div class="order pending">
+                  <img src="assets/rahmat.png" alt="Rahmat Tour Logo">
+                  <div class="text">
+                    <p>Rahmat Tour <small>2 Orders</small></p>
+                  </div>
+                  <span>Rp 500.000</span>
+                </div>
+                <div class="order cancelled">
+                  <img src="assets/rahmat.png" alt="Rahmat Tour Logo">
+                  <div class="text">
+                    <p>Rahmat Tour <small>7 Orders</small></p>
+                  </div>
+                  <span>Dibatalkan</span>
+                </div>
+                <div class="order success">
+                  <img src="assets/rahmat.png" alt="Rahmat Tour Logo">
+                  <div class="text">
+                    <p>Rahmat Tour <small>16 Orders</small></p>
+                  </div>
+                  <span>Rp 1.500.000</span>
+                </div>
+              </section>
+              
+          </section>
+      
+          <!-- Kolom Kanan -->
+          <section class="right-section">
+            <div class="recent-sales">
+              <h2>Penjualan Terakhir</h2>
+              <ul>
+                <li>
+                    <div class="left">
+                      <img src="assets/rahmat.png" alt="Rahmat Tour Logo">
+                      <div class="text">
+                        <strong>Rahmat Tour</strong>
+                        <p>20 minutes ago</p>
+                      </div>
+                    </div>
+                    <div class="right">
+                      <span>+Rp 1.500.000</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                      <img src="assets/logoA.png" alt="Rahmat Tour Logo">
+                      <div class="text">
+                        <strong>Trekking Trails Travel Co.</strong>
+                        <p>45 minutes ago</p>
+                      </div>
+                    </div>
+                    <div class="right">
+                      <span>+Rp 1.000.000</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="left">
+                      <img src="assets/logoB.png" alt="Rahmat Tour Logo">
+                      <div class="text">
+                        <strong>Dreamscapes Travel Group</strong>
+                        <p>1 hour ago</p>
+                      </div>
+                    </div>
+                    <div class="right">
+                      <span>+Rp 450.000</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="left">
+                      <img src="assets/logoC.png" alt="Rahmat Tour Logo">
+                      <div class="text">
+                        <strong>Vagabond Ventures</strong>
+                        <p>5 hours ago</p>
+                      </div>
+                    </div>
+                    <div class="right">
+                      <span>+Rp 250.000</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="left">
+                      <img src="assets/logoD.png" alt="Rahmat Tour Logo">
+                      <div class="text">
+                        <strong>Global Journeys</strong>
+                        <p>23 hours ago</p>
+                      </div>
+                    </div>
+                    <div class="right">
+                      <span>+Rp 3.000.000</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="left">
+                      <img src="assets/logoE.png" alt="Rahmat Tour Logo">
+                      <div class="text">
+                        <strong>Epic Escapes</strong>
+                        <p>2 days ago</p>
+                      </div>
+                    </div>
+                    <div class="right">
+                      <span>+Rp 300.000</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="left">
+                      <img src="assets/logoF.png" alt="Rahmat Tour Logo">
+                      <div class="text">
+                        <strong>Wanderlust Adventures</strong>
+                        <p>30 days ago</p>
+                      </div>
+                    </div>
+                    <div class="right">
+                      <span>+Rp 500.000</span>
+                    </div>
+                  </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </main>      
+  </div>
+</body>
+</html>

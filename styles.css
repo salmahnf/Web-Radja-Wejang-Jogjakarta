@@ -358,7 +358,7 @@ footer {
   margin-right: 5px;
 }
 
-// #3 popup
+ /* #3 popup */
 .modal {
   display: none;
   position: fixed;
@@ -500,7 +500,7 @@ body.modal-active {
   margin-bottom: 20px;
 }
 
-//checkout
+/* checkout */
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -756,7 +756,7 @@ body.modal-active {
   }
 }
 
-//produk
+/* produk */
 .logo-container {
   display: flex;
   flex-direction: column;
@@ -787,7 +787,7 @@ body.modal-active {
   height: auto;
 }
 
-//colapse
+/* colapse */
 .menu-section {
   width: 100%;
 }
