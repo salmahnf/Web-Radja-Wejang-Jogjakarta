@@ -1,0 +1,147 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fbd3cd;
+  color: #333;
+  padding: 40px;
+  transform: scale(0.9); 
+  transform-origin: top center; 
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+/* Form Styling */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.form-group-horizontal label {
+  font-weight: 600;
+  width: 150px;
+  text-align: leftl
+}
+
+.form-group-horizontal input,
+.form-group-horizontal select {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  flex: 1; 
+}
+
+.form-group-horizontal input::placeholder {
+  font-style: italic;
+  color: #aaa;
+}
+
+.form-group-row {
+  display: flex; 
+  align-items: center; 
+  gap: 15px; 
+}
+
+.form-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item label {
+  font-weight: 600;
+  margin-bottom: 5px; 
+}
+
+.form-group-row select,
+.form-group-row input {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1; 
+}
+
+.form-group-row label {
+  font-weight: 600;
+  margin-left: 5px; 
+}
+
+.stok-input-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.stok-input-container input {
+  flex: 1;
+}
+
+
+.check-btn {
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  background-color: #ABEBC6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.check-btn:hover {
+  background-color: #8AD190;
+}
+
+.btn-simpan {
+  background-color: #FF7051;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-simpan:hover {
+  background-color: #e66045;
+}
+
+select {
+  appearance: none;
+  background: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="black" d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+  background-color: white;
+  background-size: 12px;
+}
+

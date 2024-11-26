@@ -1,0 +1,159 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fbd3cd;
+  color: #333;
+  padding: 40px;
+  transform: scale(0.9);
+  transform-origin: top center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.header h1 {
+  font-weight: bold;
+  margin-top: 55px;
+  margin-bottom: 25px;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto 10px;
+}
+
+#category-input {
+  padding: 10px 15px;
+  font-size: 15px; 
+  font-weight: bold; 
+  color: #333;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  width: 100%;
+}
+
+#add-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #FF7051;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+#add-btn:hover {
+  background-color: #e66045;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+thead {
+  background-color: #FF7051;
+  color: white;
+}
+
+thead th {
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody td {
+  padding: 10px;
+  font-size: 14px;
+  vertical-align: middle;
+  color: #333; 
+  font-weight: bold; 
+  text-align: center;
+}
+
+tbody td:nth-child(2) {
+  font-size: 15px; 
+}
+
+
+tbody td:first-child {
+  text-align: center;
+}
+
+.edit-btn, .delete-btn {
+  padding: 5px 15px; 
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: bold; 
+  width: 80px; 
+  text-align: center;
+}
+
+.edit-btn {
+  background-color: #ABEBC6;
+  color: #333;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background-color: #cb2808;
+  color: white;
+  font-weight: bold;
+}
+
+.edit-btn:hover {
+  background-color: #8AD190;
+}
+
+.delete-btn:hover {
+  background-color: #EA9890;
+}
+
+tbody td:last-child {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}

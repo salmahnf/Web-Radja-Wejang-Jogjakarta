@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Edit Produk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="edit.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Form Add Produk</h1>
+    <form class="edit-form">
+      <!-- Kategori -->
+      <div class="form-group-horizontal">
+        <label for="kategori">Kategori</label>
+        <select id="kategori" name="kategori">
+          <option selected>Aneka Bakpia</option>
+          <option>Aneka Keripik</option>
+          <option>Aneka Snack</option>
+        </select>
+      </div>
+
+      <!-- Nama Produk -->
+      <div class="form-group-horizontal">
+        <label for="nama-produk">Nama Produk</label>
+        <input type="text" id="nama-produk" name="nama-produk" placeholder="Masukkan nama produk">
+      </div>
+
+      <!-- Harga Produk -->
+      <div class="form-group-horizontal">
+        <label for="harga-produk">Harga Produk</label>
+        <input type="number" id="harga-produk" name="harga-produk" placeholder="Masukkan harga produk">
+      </div>
+
+      <!-- Gambar Produk -->
+      <div class="form-group-horizontal">
+        <label for="gambar-produk">Gambar Produk</label>
+        <input type="file" id="gambar-produk" name="gambar-produk">
+      </div>
+
+      <!-- Deskripsi Produk -->
+      <div class="form-group-horizontal">
+        <label for="deskripsi-produk">Deskripsi Produk</label>
+        <input type="text" id="deskripsi-produk" name="deskripsi-produk" placeholder="Masukkan deskripsi produk">
+      </div>
+
+      <!-- Varian Produk dan Stok Produk -->
+      <div class="form-group-horizontal form-group-row">
+        <label for="varian-produk">Varian Produk</label>
+        <select id="varian-produk" name="varian-produk">
+          <option>Coklat</option>
+          <option>Kacang Ijo</option>
+          <option>Keju</option>
+        </select>
+      
+        <label for="stok-produk">Stok Produk</label>
+        <div class="stok-input-container">
+          <input type="number" id="stok-produk" name="stok-produk" placeholder="Masukkan stok">
+          <button type="button" class="check-btn">✔</button>
+        </div>
+      </div>
+      
+      
+
+      <!-- Tombol Simpan -->
+      <button type="submit" class="btn-simpan">Simpan</button>
+    </form>
+  </div>
+</body>
+</html>
