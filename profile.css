@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -27,8 +28,8 @@ body {
 }
 
 .sidebar {
-  width: 25vw;
-  max-width: 250px;
+  width: 25vw;  /* Lebar Sidebar 25% dari layar */
+  max-width: 250px;  /* Batas maksimal */
   background-color: #e56244;
   color: #fff;
   display: flex;
@@ -38,6 +39,7 @@ body {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   flex-shrink: 0;
+  height: 100vh;  /* Sidebar akan mengikuti tinggi layar */
 }
 
 .brand {
@@ -132,7 +134,7 @@ body {
 .content {
   flex: 1;
   padding: 32px;
-  max-width: calc(100vw - 25vw);
+  max-width: calc(100vw - 25vw);  /* Konten menyesuaikan lebar setelah sidebar */
   box-sizing: border-box;
 }
 
@@ -249,17 +251,17 @@ textarea {
 /* Responsif */
 @media (max-width: 1024px) {
   .sidebar {
-    width: 26vw;
+    width: 26vw;  /* Sidebar lebih kecil di tablet */
   }
 
   .content {
-    width: calc(100vw - 26vw);
+    width: calc(100vw - 26vw);  /* Konten menyesuaikan lebar */
   }
 }
 
 @media (max-width: 768px) {
   .sidebar {
-    width: 30vw;
+    width: 30vw;  /* Sidebar lebih kecil di tablet */
   }
 
   .content {
@@ -270,7 +272,7 @@ textarea {
 
 @media (max-width: 480px) {
   .sidebar {
-    width: 35vw;
+    width: 35vw;  /* Sidebar lebih kecil di mobile */
   }
 
   .content {
