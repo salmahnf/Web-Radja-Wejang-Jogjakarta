@@ -1,0 +1,623 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+  }
+  
+  /* Profile Section */
+  .left {
+    padding: 20px;
+  }
+  
+  .profile {
+    text-align: center;
+  }
+  
+  .profile img {
+    width: 100px; /* Ukuran logo atau gambar profil */
+    height: 100px;
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    margin-bottom: 15px; /* Jarak antara gambar dan nama */
+  }
+  
+  .profile h1 {
+    font-size: 24px;
+    color: #C55E60; /* Warna coklat seperti di gambar */
+    margin-bottom: 20px; /* Jarak antara nama dan tombol */
+  }
+
+  
+  /* Styling untuk Header */
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-left img {
+    width: 40px; /* Ukuran logo */
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .header-left h1 {
+    font-size: 20px;
+    color: #C55E60;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 250px;
+    margin-right: 20px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border: 1px solid #C55E60;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #C55E60;
+  }
+  
+  .search-bar .search-icon {
+    position: absolute;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .back-button {
+    padding: 10px 20px;
+    background-color: #E4924B;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #c64b42;
+  }
+  
+  .back-button img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Main Content Section */
+  .container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .left, .middle, .right {
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .left {
+    flex: 2;
+  }
+ 
+/* Profil styling */
+.profile {
+    text-align: center; /* Konten rata tengah */
+  }
+  
+  .profile img {
+    width: 200px; /* Ukuran logo */
+    height: 200px;
+    border-radius: 50%; /* Membuat gambar bulat */
+    margin-bottom: 15px; /* Jarak bawah */
+  }
+  
+  .profile h1 {
+    font-size: 24px;
+    color: black; /* Warna utama */
+    margin-bottom: 20px; /* Jarak bawah */
+  }
+  
+  /* Tombol styling */
+  .wa-button,
+.edit-button {
+  display: flex; /* Flexbox */
+  align-items: center; /* Gambar dan teks sejajar secara vertikal */
+  justify-content: center; /* Ikon di kiri, teks di kanan */
+  gap: 8px; /* Jarak antara gambar dan teks */
+  width: 100%;
+  max-width: 300px; /* Maksimal lebar tombol */
+  padding: 6px 10px; /* Lebih tipis, vertikal (6px), horizontal (10px) */
+  margin: 10px auto; /* Tengah horizontal */
+  font-size: 14px; /* Ukuran font lebih kecil */
+  font-weight: bold;
+  text-decoration: none; /* Hilangkan garis bawah */
+  border-radius: 4px; /* Sudut sedikit membulat */
+  transition: all 0.3s ease; /* Animasi hover */
+  }
+  
+  /* Whatsapp button */
+  .wa-button {
+    background-color: #E4924B;
+    color: white;
+  }
+  
+  .wa-button:hover {
+    background-color: #c64b42;
+  }
+  
+  .wa-button img {
+    width: 20px; /* Lebar gambar */
+    height: 20px;
+    object-fit: contain; /* Gambar tidak terpotong */
+  }
+  
+  /* Edit Profile button */
+  .edit-button {
+    background-color: white;
+    border: 2px solid #E4924B;
+    color: #E4924B;
+  }
+  
+  .edit-button:hover {
+    background-color: #c64b42;
+    border-color: #c64b42;
+    color: white;
+  }
+  
+  .edit-button img {
+    width: 20px; /* Lebar gambar */
+    height: 20px;
+    object-fit: contain; /* Gambar tidak terpotong */
+  }
+  .middle {
+    flex: 4;
+  }
+  .profile-info h1 {
+    text-align: start;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}/* Atur ulang margin dan padding pada grup input */
+.input-group {
+    display: flex;
+    gap: 5px; /* Jarak kecil antar elemen */
+    align-items: center;
+    margin-bottom: 10px; /* Jarak bawah antar grup */
+}
+
+/* Input dan label di dalam grup input */
+.input-group .form-control {
+    flex: 1; /* Isi ruang kosong */
+    font-size: 14px; /* Font ukuran tetap */
+    padding: 10px; /* Padding lebih kecil */
+    border: 1px solid #FAD1C8; /* Warna senada */
+    border-radius: 5px;
+    background-color: #FAD1C8;
+}
+
+/* Styling untuk label elemen */
+.input label {
+    font-size: 14px; /* Ukuran label */
+    color: #555;
+    display: block;
+    margin-bottom: 3px; /* Jarak kecil antara label dan input */
+}
+
+/* Styling elemen grup text */
+.input-group .input-group-text {
+    background-color: #FAD1C8;
+    border: 1px solid #FAD1C8;
+    font-size: 14px;
+    padding: 8px; /* Padding lebih kecil */
+    border-radius: 5px;
+    flex-shrink: 0; /* Supaya ukuran tetap */
+}
+
+/* Tombol update */
+.input-group button.update-button {
+    padding: 8px 12px;
+    background-color: #E4924B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-group button.update-button:hover {
+    background-color: #c64b42;
+}
+
+
+.input-group .input-group-text {
+    background-color: #FAD1C8;
+    border: 1px solid #FAD1C8;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+}
+/* Grup hasil styling */
+.hasil-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Jarak antar elemen grup */
+}
+
+.hasil-inline {
+    display: flex;
+    gap: 24px; /* Jarak antara Laba Mitra dan Laba Ditarik */
+    justify-content: space-between; /* Sebar elemen agar rapi */
+    align-items: flex-start; /* Atur posisi elemen vertikal */
+}
+
+.hasil {
+    flex: 1; /* Supaya elemen memiliki lebar seimbang */
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Jarak antara label dan input */
+}
+
+/* Label styling */
+.hasil label {
+    text-align: left;
+    font-size: 14px;
+    color: #333; /* Warna teks label */
+}
+
+/* Grup kedua untuk hasil */
+.hasil-group2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Input readonly styling */
+.readonly-input {
+    background-color: #f9f9f9; /* Warna latar readonly */
+    border: 1px solid #ccc; /* Border tipis */
+    border-radius: 5px;
+    padding: 10px 12px; /* Padding untuk input */
+    font-size: 14px; /* Ukuran font */
+    color: #555; /* Warna teks input */
+    width: 100%; /* Full width */
+    cursor: not-allowed; /* Kursor saat readonly */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Efek dalam */
+}
+
+/* Placeholder styling */
+.readonly-input::placeholder {
+    color: #aaa; /* Warna placeholder lebih pudar */
+}
+
+.profile-info .input button.update-button {
+    padding: 8px 16px;
+    background-color: #E4924B;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 0; /* Menambahkan jarak atas untuk tombol */
+    flex-shrink: 0; /* Memastikan tombol tidak menyusut */
+}
+
+.profile-info .input button.update-button:hover {
+    background-color: #c64b42;
+}
+.form-control1 {
+    flex: 1; /* Agar textarea mengambil ruang sisa */
+    padding: 10px;
+    border: 1px solid #FAD1C8;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #FAD1C8;
+    resize: vertical; /* Membatasi resize hanya vertikal */
+}
+
+/* Hover dan fokus untuk textarea */
+.form-control1:focus {
+    border-color: #E4924B;
+    outline: none;
+    box-shadow: 0 0 5px rgba(228, 146, 75, 0.5);
+}
+
+
+/* Earnings and History Section */
+.earnings-history {
+    display: flex;
+    gap: 16px;
+    
+}
+
+/* Earnings and Profit Sharing Column */
+.earnings-column {
+    margin-top: 20px; 
+    margin-left: 10px; 
+    flex: 8; /* 70% dari total width */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+/* Profit Sharing Section */
+.profit-sharing {
+    text-align: start;
+}
+
+.profit-sharing label {
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.profit-sharing input {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 4px;
+    color: #333;
+    background-color: white;
+    margin-bottom: 10px;
+    pointer-events: none;
+}
+
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Memastikan lebar penuh */
+    position: relative;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background-color: rgba(243, 114, 88, 0.5);
+    cursor: pointer;
+    color: white;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+}
+.tabs button:hover {
+    background-color: rgba(243, 114, 88, 0.7); /* Warna lebih solid saat hover */
+}
+
+.tabs button.active {
+    background-color: #f37258;
+    /*Warnasoliduntuktombolaktif*/color: white;
+    z-index: 2;
+    /*Tombolaktifberadadiatas*/border-radius: 10px;
+    /*Membuattombolaktiflebihmelengkung*/transform: scale(1.01);
+    /*Sedikitmemperbesartombolaktif*/margin: -2px;
+    /*Menindihtombollainnyahanyapadasudut*/box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+   }
+/* Earnings and History Section */
+.earnings-history {
+    display: flex;
+    gap: 32px; /* Jarak antar elemen */
+}
+
+/* Earnings and Profit Sharing Column */
+.earnings-column {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.earnings {
+    flex: 1;
+    padding: 16px;
+    background-color: #FAD1C8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.earnings h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+/* Grup hasil dengan proporsi 70:30 */
+.hasil7 {
+    flex: 7; /* 70% lebar untuk Total Penjualan */
+}
+
+.hasil9 {
+    flex: 3; /* 30% lebar untuk Barang Terjual */
+    margin-left: 20px; /* Menambahkan jarak antara hasil8 dan hasil9 */
+}
+
+/* Label styling untuk hasil8 dan hasil9 */
+.hasil8 label,
+.hasil9 label {
+    font-size: 14px;
+    color: #333;
+    text-align: left; /* Mengubah label menjadi rata kiri */
+}
+
+/* Grup hasil yang menggunakan Flexbox */
+.hasil-group7 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Jarak antar elemen grup */
+}
+
+/* Grup inline untuk menata elemen berdampingan */
+.hasil-inline7 {
+    display: flex;
+    justify-content: space-between; /* Agar elemen tersebar merata */
+    width: 100%; /* Lebar penuh agar elemen berada dalam satu baris */
+}
+
+/* Menambahkan margin untuk elemen hasil agar ada jarak */
+.hasil-group8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Input readonly styling */
+.readonly-input {
+    background-color: #f9f9f9; /* Warna latar readonly */
+    border: 1px solid #ccc; /* Border tipis */
+    border-radius: 5px;
+    padding: 10px 12px; /* Padding untuk input */
+    font-size: 14px; /* Ukuran font */
+    color: #555; /* Warna teks input */
+    width: 100%; /* Full width */
+    cursor: not-allowed; /* Kursor saat readonly */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Efek dalam */
+}
+
+/* Label styling */
+.hasil8 label {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+.hasil9 label {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+  
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.row7 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.content7 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.nama_tour {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.jam {
+    font-size: 14px;
+    color: #777;
+}
+
+.status {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    color: #28a745;  /* Default color for status */
+}
+
+.status-failed {
+    color: #dc3545; /* Red color for "BATAL" status */
+}
+
+.status.active {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.status-failed.active {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.status:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .middle {
+        padding: 20px;
+    }
+
+    .profile-info h1 {
+        font-size: 20px;
+    }
+
+    .input input,
+    .input textarea {
+        font-size: 12px;
+    }
+
+    .update-button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+  
+  .right {
+    flex: 3;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
