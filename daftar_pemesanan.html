@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Settings</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="profile.css" />
+    <style>
+      /* Container untuk profile */
+      .profile-container {
+        position: relative;
+        width: 100px;
+        height: 100px;
+      }
+
+      /* Gambar profile berbentuk lingkaran dengan border hitam */
+      .profile-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #525252; /* Border hitam di sekitar gambar profile */
+        cursor: pointer; /* Membuat gambar profil bisa diklik */
+      }
+
+      /* Tombol yang mengandung ikon pensil */
+      .edit-icon-container {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: white;
+        border-radius: 50%;
+        padding: 7px; /* Perbesar area klik */
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        transform: translate(15%, 15%); /* Menggeser sedikit ke dalam */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .edit-icon-container:hover {
+        background-color: lightgray;
+      }
+
+      .edit-icon {
+        font-size: 18px; /* Ukuran ikon pensil */
+      }
+
+      /* Input file untuk memilih gambar, disembunyikan */
+      #image-input {
+        display: none;
+      }
+
+    .main-content {
+        flex: 1;
+        padding: 20px;
+        background-color: #fad1c8;
+    }
+    .main-content header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .main-content header .header-left h1 {
+        font-size: 24px;
+        color: #333;
+    }
+    
+    .main-content header .header-left p {
+        color: #666;
+    }
+    
+    .main-content .search-bar {
+        display: flex;
+        align-items: center;  /* Align items vertically */
+        gap: 10px;  /* Space between input field and button */
+    }
+    
+    .main-content .search-bar input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px 0 0 5px;
+        font-size: 14px;
+        width: 200px; /* Optional: adjust input width */
+    }
+    
+    .main-content .search-bar button {
+        padding: 10px 20px;
+        background-color: #f37258;
+        color: white;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Space between icon and text */
+    }
+
+    .order-list {
+        margin: 0 auto;
+        width: 90%; /* Lebih lebar agar tidak kosong */
+    }
+
+    .order-list table {
+        width: 100%;
+        border-collapse: separate; /* Jarak antar baris */
+        border-spacing: 0 15px; /* Memberi jarak antar baris */
+        font-family: 'Montserrat', sans-serif; /* Menggunakan font Montserrat */
+    }
+
+    .order-list th,
+    .order-list td {
+        padding: 15px 20px; /* Memberi ruang dalam sel */
+        text-align: center;
+        font-weight: bold; /* Montserrat bold */
+        background-color: #ffffff; /* Warna latar putih */
+        border: none;
+    }
+
+    .order-list th {
+        background-color: #fad1c8; /* Warna header */
+        color: #333; /* Warna teks header */
+    }
+
+    .order-list tbody tr {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan untuk baris */
+    }
+
+    .order-list tbody tr:hover {
+        background-color: #fcefe9; /* Efek hover */
+    }
+
+    .order-list tbody tr td {
+        background-color: #fff;
+        text-align: center; /* Konten tetap di tengah */
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="brand">
+          <img src="assets/logoSidebar.png" alt="Logo" class="logo" />
+        </div>
+        <div class="profile">
+          <div class="profile-container">
+            <!-- Gambar profil yang bisa diklik -->
+            <img
+              id="profile-img"
+              class="profile-image"
+              src="assets/tourLogo.png"
+              alt="Profile Image"
+              onclick="document.getElementById('image-input').click();"
+            />
+
+            <!-- Tombol pensil di pojok kanan bawah -->
+            <div
+              class="edit-icon-container"
+              onclick="document.getElementById('image-input').click();"
+            >
+            <img src="assets/iedit.png" alt="Edit Icon">
+            </div>
+
+            <!-- Input file untuk memilih gambar -->
+            <input
+              type="file"
+              id="image-input"
+              accept="image/*"
+              onchange="updateProfileImage(event)"
+            />
+          </div>
+          <h2>Rahmat Tour</h2>
+          <p>1A241111</p>
+        </div>
+        <nav class="menu">
+          <a href="#" class="menu-item">
+            <img src="assets/sideprof.png" alt="Profile" class="menu-icon" />
+            Profile
+          </a>
+          <a href="#" class="menu-item active">
+            <img
+              src="assets/sidepesanan.png"
+              alt="Daftar Pesanan"
+              class="menu-icon"
+            />
+            Daftar Pesanan
+          </a>
+          <a href="#" class="menu-item">
+            <img src="assets/sidekomisi.png" alt="Komisi" class="menu-icon" />
+            Komisi
+          </a>
+        </nav>
+
+        <a href="#" class="logout"
+          ><i class="fas fa-sign-out-alt"></i> Keluar</a
+        >
+      </aside>
+      <main class="main-content">
+        <header>
+            <div class="header-left">
+              <h1>Dashboard</h1>
+              <p>10 Desember 2024</p>
+            </div>
+            <div class="search-bar">
+              <input type="text" placeholder="November" id="search-input" style = "border: 1px solid #F9D6CE;">
+              <button id="search-btn">
+                <img src="assets/search-alt-2.png" alt="Cari">Cari
+              </button>
+            </div>
+          </header>
+          <div class="order-list">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Kode Pesanan</th>
+                  <th>Nama Pembeli</th>
+                  <th>Barang</th>
+                  <th>Jumlah</th>
+                  <th>Tanggal Pembelian</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>ZM222137EW</td>
+                  <td>Tara</td>
+                  <td>Bakpia Tugu</td>
+                  <td>5 Box</td>
+                  <td>12-11-2024</td>
+                  <td>Sukses</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>ZM222137EW</td>
+                  <td>Tara</td>
+                  <td>Bakpia Tugu</td>
+                  <td>5 Box</td>
+                  <td>12-11-2024</td>
+                  <td>Sukses</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>ZM222137EW</td>
+                  <td>Tara</td>
+                  <td>Bakpia Tugu</td>
+                  <td>5 Box</td>
+                  <td>12-11-2024</td>
+                  <td>Dibatalkan</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>ZM222137EW</td>
+                  <td>Tara</td>
+                  <td>Bakpia Tugu</td>
+                  <td>5 Box</td>
+                  <td>12-11-2024</td>
+                  <td>Sukses</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>ZM222137EW</td>
+                  <td>Tara</td>
+                  <td>Bakpia Tugu</td>
+                  <td>5 Box</td>
+                  <td>12-11-2024</td>
+                  <td>Dalam Pengiriman</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>ZM222137EW</td>
+                  <td>Tara</td>
+                  <td>Bakpia Tugu</td>
+                  <td>5 Box</td>
+                  <td>12-11-2024</td>
+                  <td>Sukses</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>                
+      </main>
+    </div>
+  </body>
+</html>
