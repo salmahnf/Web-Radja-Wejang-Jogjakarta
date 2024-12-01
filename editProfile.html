@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Settings</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="profile.css" />
+    <style>
+      /* Container untuk profile */
+      .profile-container {
+        position: relative;
+        width: 100px;
+        height: 100px;
+      }
+
+      /* Gambar profile berbentuk lingkaran dengan border hitam */
+      .profile-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #525252; /* Border hitam di sekitar gambar profile */
+        cursor: pointer; /* Membuat gambar profil bisa diklik */
+      }
+
+      /* Tombol yang mengandung ikon pensil */
+      .edit-icon-container {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: white;
+        border-radius: 50%;
+        padding: 7px; /* Perbesar area klik */
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        transform: translate(15%, 15%); /* Menggeser sedikit ke dalam */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .edit-icon-container:hover {
+        background-color: lightgray;
+      }
+
+      .edit-icon {
+        font-size: 18px; /* Ukuran ikon pensil */
+      }
+
+      /* Input file untuk memilih gambar, disembunyikan */
+      #image-input {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="brand">
+          <img src="assets/logoSidebar.png" alt="Logo" class="logo" />
+        </div>
+        <div class="profile">
+          <div class="profile-container">
+            <!-- Gambar profil yang bisa diklik -->
+            <img
+              id="profile-img"
+              class="profile-image"
+              src="assets/tourLogo.png"
+              alt="Profile Image"
+              onclick="document.getElementById('image-input').click();"
+            />
+
+            <!-- Tombol pensil di pojok kanan bawah -->
+            <div
+              class="edit-icon-container"
+              onclick="document.getElementById('image-input').click();"
+            >
+            <img src="assets/iedit.png" alt="Edit Icon">
+            </div>
+
+            <!-- Input file untuk memilih gambar -->
+            <input
+              type="file"
+              id="image-input"
+              accept="image/*"
+              onchange="updateProfileImage(event)"
+            />
+          </div>
+          <h2>Rahmat Tour</h2>
+          <p>1A241111</p>
+        </div>
+        <nav class="menu">
+          <a href="#" class="menu-item active">
+            <img src="assets/sideprof.png" alt="Profile" class="menu-icon" />
+            Profile
+          </a>
+          <a href="#" class="menu-item">
+            <img
+              src="assets/sidepesanan.png"
+              alt="Daftar Pesanan"
+              class="menu-icon"
+            />
+            Daftar Pesanan
+          </a>
+          <a href="#" class="menu-item">
+            <img src="assets/sidekomisi.png" alt="Komisi" class="menu-icon" />
+            Komisi
+          </a>
+        </nav>
+
+        <a href="#" class="logout"
+          ><i class="fas fa-sign-out-alt"></i> Keluar</a
+        >
+      </aside>
+      <main class="content">
+        <h1>Account Settings</h1>
+        <p class="subtitle">Personalize Your Store and Preferences</p>
+        <div class="card">
+          <h2>
+            Rahmat Tour
+            <span class="edit"><i class="fas fa-pencil-alt"></i></span>
+          </h2>
+          <form class="form">
+            <div class="form-group">
+              <label>Nama Penanggung Jawab</label>
+              <div class="input">
+                <img src="assets/iuser.png" alt="User" class="icon" />
+                <input type="text" value="nama" />
+                <span class="edit"
+                  ><img src="assets/iedit.png" alt="Edit"
+                /></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <div class="input">
+                <img src="assets/iemail.png" alt="Email" class="icon" />
+                <input type="email" value="rahmattour_99@gmail.com" />
+                <span class="edit"
+                  ><img src="assets/iedit.png" alt="Edit"
+                /></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Telepon</label>
+              <div class="input">
+                <img src="assets/itelp.png" alt="Phone" class="icon" />
+                <input type="text" value="081234567890" />
+                <span class="edit"
+                  ><img src="assets/iedit.png" alt="Edit"
+                /></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Rekening</label>
+              <div class="input">
+                <img src="assets/irek.png" alt="Bank" class="icon" />
+                <input type="text" value="2322 3222 2548 4813" />
+                <span class="edit"
+                  ><img src="assets/iedit.png" alt="Edit"
+                /></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Alamat</label>
+              <div class="input">
+                <img src="assets/iloc.png" alt="Location" class="icon" />
+                <textarea>
+Jl. Merdeka No. 16, Jakarta Pusat, DKI Jakarta</textarea
+                >
+                <span class="edit"
+                  ><img src="assets/iedit.png" alt="Edit"
+                /></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Kode Terbaru</label>
+              <div class="input">
+                <input type="text" value="Q89JH9" readonly />
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      function updateProfileImage(event) {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById("profile-img").src = e.target.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
+  </body>
+</html>
