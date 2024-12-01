@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Komisi - Radja Wedang Jogjakarta</title>
+    <link rel="stylesheet" href="style7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="brand">
+              <img src="assets/logoSidebar.png" alt="Logo" class="logo" />
+            </div>
+            <div class="profile">
+              <div class="profile-container">
+                <!-- Gambar profil yang bisa diklik -->
+                <img
+                  id="profile-img"
+                  class="profile-image"
+                  src="assets/tourLogo.png"
+                  alt="Profile Image"
+                />
+        
+              <h2>Rahmat Tour</h2>
+              <p>1A241111</p>
+            </div>
+            <nav class="menu">
+              <a href="#" class="menu-item">
+                <img src="assets/profile.png" alt="Profile" class="menu-icon" />
+                Profile
+              </a>
+              <a href="#" class="menu-item active">
+                <img
+                  src="assets/daftar_pesanan.png"
+                  alt="Daftar Pesanan"
+                  class="menu-icon"
+                />
+                Daftar Pesanan
+              </a>
+              <a href="#" class="menu-item">
+                <img src="assets/komisi.png" alt="Komisi" class="menu-icon" />
+                Komisi
+              </a>
+            </nav>
+    
+            <a href="#" class="logout"
+              ><i class="fas fa-sign-out-alt"></i> Keluar</a
+            >
+          </aside>
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <div class="header-left">
+                    <h1>Komisi</h1>
+                    <p>Desember 2024</p>
+                </div>
+            </header>
+
+            <!-- Earnings and History Section -->
+            <div class="earnings-history">
+                <!-- Earnings and Profit Sharing Column -->
+                <div class="earnings-column">
+                    <!-- Profit Sharing -->
+                    <div class="profit-sharing">
+                        <label for="profit">Persentase Bagi Laba</label>
+                        <input type="text" id="profit" value="20 %" readonly>
+                    </div>
+
+                    <!-- Earnings Section -->
+                    <div class="tabs">
+                        <button>Kemarin</button>
+                        <button class="active">7 Hari Terakhir</button>
+                        <button>Bulan Ini</button>
+                    </div>
+                    <div class="earnings">
+                        <h2>Penghasilan Saat Ini</h2>
+                        <div class="earnings-detail">
+                            <div>Total Penjualan</div>
+                            <div class="value">Rp 3.000.000.000,00</div>
+                        </div>
+                        <div class="earnings-detail">
+                            <div>Barang Terjual</div>
+                            <div class="value">20</div>
+                        </div>
+                        <div class="earnings-detail">
+                            <div>Laba</div>
+                            <div class="value">Rp 1.000.000,00</div>
+                        </div>
+                        <div class="earnings-detail">
+                            <div>Jumlah Ditarik</div>
+                            <div class="value">Rp 1.000.000,00</div>
+                        </div>
+                        <button class="withdraw-button">Tarik Tunai</button>
+                    </div>
+                </div>
+
+                <!-- History Section -->
+                <div class="history">
+                    <h2>History Penarikan</h2>
+                    <div class="tabs">
+                        <button>Kemarin</button>
+                        <button class="active">7 Hari Terakhir</button>
+                        <button>Bulan Ini</button>
+                    </div>
+                    <div class="history-list">
+                        <div class="row">
+                            <div class="content">
+                                <div class="tanggal">22 November 2024</div>
+                                <div class="value">Rp. 500.000,00</div>
+                            </div>
+                            <div class="status">Sukses</div>
+                        </div>
+                        <div class="row">
+                            <div class="content">
+                                <div class="tanggal">2 hari lalu</div>
+                                <div class="value">Rp. 500.000,00</div>
+                            </div>
+                            <div class="status">Sukses</div>
+                        </div>
+                        <!-- Tambahkan baris lain sesuai kebutuhan -->
+                    </div>
+                </div>
+
+
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
