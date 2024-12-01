@@ -1,5 +1,5 @@
-<?php  
-include "koneksi.php"; 
+<?php
+include "koneksi.php";
 
 // Ambil ID produk dari URL
 $id_produk = isset($_GET['id']) ? $_GET['id'] : 0;
@@ -14,8 +14,8 @@ $produk = mysqli_fetch_assoc($result_produk);
 
 // Jika produk tidak ditemukan, hentikan eksekusi
 if (!$produk) {
-    echo "Produk tidak ditemukan!";
-    exit;
+  echo "Produk tidak ditemukan!";
+  exit;
 }
 
 // Query untuk mengambil semua kategori
@@ -36,6 +36,7 @@ $varian_list = mysqli_fetch_all($result_varian, MYSQLI_ASSOC);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +55,7 @@ $varian_list = mysqli_fetch_all($result_varian, MYSQLI_ASSOC);
       labelVarian.setAttribute("for", "nama-varian");
       labelVarian.innerText = "Varian Produk";
       labelVarian.style.marginLeft = "0px";
-      labelVarian.style.width = "150px";  // Penyesuaian sesuai dengan label yang ada
+      labelVarian.style.width = "150px"; // Penyesuaian sesuai dengan label yang ada
 
       // Input untuk nama varian
       const inputNamaVarian = document.createElement("input");
@@ -62,7 +63,7 @@ $varian_list = mysqli_fetch_all($result_varian, MYSQLI_ASSOC);
       inputNamaVarian.name = "new_nama_varian[]";
       inputNamaVarian.placeholder = "Nama Varian Baru";
       inputNamaVarian.required = true;
-      inputNamaVarian.style.width = "100%";  // Sesuaikan dengan lebar input lainnya
+      inputNamaVarian.style.width = "100%"; // Sesuaikan dengan lebar input lainnya
 
       // Label untuk Stok Varian
       const labelStok = document.createElement("label");
@@ -75,25 +76,15 @@ $varian_list = mysqli_fetch_all($result_varian, MYSQLI_ASSOC);
       inputStokVarian.name = "new_stok[]";
       inputStokVarian.placeholder = "Stok Baru";
       inputStokVarian.required = true;
-      inputStokVarian.oninput = function () {
+      inputStokVarian.oninput = function() {
         this.value = this.value.replace(/[^0-9]/g, '');
       };
-      inputStokVarian.style.width = "100%";  // Sesuaikan dengan lebar input lainnya
-
-      // Tombol hapus varian (X)
-      const removeButton = document.createElement("button");
-      removeButton.type = "button";
-      removeButton.classList.add("check-btn");
-      removeButton.innerText = "X";
-      removeButton.onclick = function () {
-        varianDiv.style.display = 'none';
-      };
+      inputStokVarian.style.width = "100%"; // Sesuaikan dengan lebar input lainnya
 
       varianDiv.appendChild(labelVarian);
       varianDiv.appendChild(inputNamaVarian);
       varianDiv.appendChild(labelStok);
       varianDiv.appendChild(inputStokVarian);
-      varianDiv.appendChild(removeButton);
       container.appendChild(varianDiv);
     }
 
@@ -149,11 +140,12 @@ $varian_list = mysqli_fetch_all($result_varian, MYSQLI_ASSOC);
       <!-- Input Varian Produk (after) -->
       <div class="form-group-vertical">
         <?php foreach ($varian_list as $index => $varian) { ?>
+          <div class="form-group-row" style="margin-bottom: 20px;"> <!-- Jarak antar varian -->
+
           <input type="hidden" name="id_produk_varian[]" value="<?= $varian['id_produk_varian']; ?>">
           <input type="hidden" name="old_id_varian[]" value="<?= $varian['id_varian']; ?>">
           <input type="hidden" name="delete_varian[]" value="0"> <!-- Hidden field untuk penanda hapus -->
 
-          <div class="form-group-row" style="margin-bottom: 20px;"> <!-- Jarak antar varian -->
             <label for="varian-produk" style="margin-left: 0px; width: 150px;">Varian Produk</label>
             <input type="text" id="varian-produk" name="nama_varian[]" value="<?= $varian['nama_varian']; ?>" style="width: 100%;">
 
@@ -180,4 +172,5 @@ $varian_list = mysqli_fetch_all($result_varian, MYSQLI_ASSOC);
     </form>
   </div>
 </body>
+
 </html>
