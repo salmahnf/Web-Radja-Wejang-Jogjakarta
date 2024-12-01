@@ -1,0 +1,415 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 20;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fad1c8; /* Warna pink muda */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.sidebar {
+    width: 25vw;  /* Lebar Sidebar 25% dari layar */
+    max-width: 250px;  /* Batas maksimal */
+    background-color: #e56244;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    flex-shrink: 0;
+    height: 100vh;  /* Sidebar akan mengikuti tinggi layar */
+  }
+  
+  .brand {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .brand .logo {
+    width: 130px;
+    height: 45px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+  }
+  
+  .brand h1 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  
+  .profile {
+    text-align: center;
+    margin: 5px 0;
+  }
+  
+  .profile h2 {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  
+  .profile p {
+    font-size: 10px;
+    color: white;
+    font-weight: 700;
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  .profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 6px;
+  }
+  
+  .menu {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    border-radius: 5px;
+  }
+  
+  .menu-item i {
+    margin-right: 6px;
+  }
+  
+  .menu-item .menu-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+  
+  .menu-item:hover,
+  .menu-item.active {
+    background-color: #e35130;
+  }
+  
+  .logout {
+    margin-top: 140px;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .logout i {
+    margin-right: 6px;
+  }
+  
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fad1c8;
+}
+
+.main-content header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    margin-left: 10px; 
+}
+
+.main-content header .header-left h1 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.main-content header .header-left p {
+    color: #333;
+}
+
+.main-content .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-content .search-bar input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+    width: 200px;
+}
+
+.main-content .search-bar button {
+    padding: 10px 20px;
+    background-color: #f37258;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Earnings and History Section */
+.earnings-history {
+    display: flex;
+    gap: 16px;
+    
+}
+
+/* Earnings and Profit Sharing Column */
+.earnings-column {
+    margin-top: 20px; 
+    margin-left: 10px; 
+    flex: 8; /* 70% dari total width */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+/* Profit Sharing Section */
+.profit-sharing {
+    text-align: start;
+}
+
+.profit-sharing label {
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.profit-sharing input {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 4px;
+    color: #333;
+    background-color: white;
+    margin-bottom: 10px;
+    pointer-events: none;
+}
+
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Memastikan lebar penuh */
+    position: relative;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background-color: rgba(243, 114, 88, 0.5);
+    cursor: pointer;
+    color: white;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+}
+.tabs button:hover {
+    background-color: rgba(243, 114, 88, 0.7); /* Warna lebih solid saat hover */
+}
+
+.tabs button.active {
+    background-color: #f37258;
+    /*Warnasoliduntuktombolaktif*/color: white;
+    z-index: 2;
+    /*Tombolaktifberadadiatas*/border-radius: 10px;
+    /*Membuattombolaktiflebihmelengkung*/transform: scale(1.01);
+    /*Sedikitmemperbesartombolaktif*/margin: -2px;
+    /*Menindihtombollainnyahanyapadasudut*/box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+   }
+/* Earnings and History Section */
+.earnings-history {
+    display: flex;
+    gap: 32px;
+}
+
+/* Earnings and Profit Sharing Column */
+.earnings-column {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.earnings {
+    flex: 1;
+    padding: 16px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.earnings h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.earnings-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f7d5cc;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.earnings-detail .value {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Button Styles */
+.withdraw-button {
+    background-color: #E56244;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.withdraw-button:hover {
+    background-color: #c54b38;
+}
+
+.history {
+    margin-left: 10px; 
+    margin-right: 10px; 
+    margin-top: 40px; 
+    flex: 2;
+    padding: 16px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .history h2 {
+    margin-top: 10px; 
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .history .tabs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+  
+  .history .tabs button {
+    flex: 1;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background-color: rgba(243, 114, 88, 0.5);
+    cursor: pointer;
+    color: white;
+    z-index: 1;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .history .tabs button:hover {
+    background-color: rgba(243, 114, 88, 0.7);
+  }
+  
+  .history .tabs button.active {
+    background-color: #f37258;
+    color: white;
+    z-index: 2;
+    transform: scale(1.01);
+    margin: -2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .history-list .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f7d5cc;
+    font-size: 18px;
+  }
+  
+  .history-list .content {
+    display: flex;
+    flex-direction: column; /* Menyusun tanggal dan value secara vertikal */
+  }
+  
+  .history-list .tanggal {
+    color: #333; /* Warna teks value */
+    margin-bottom: 4px; /* Jarak antara tanggal dan value */
+  }
+  
+  .history-list .value {
+    font-weight: bold;
+    color: #333; /* Warna teks value */
+  }
+  
+  .history-list .status {
+    color: green;
+    font-weight: bold;
+    margin-left: 20px; /* Memberi jarak dari konten utama */
+  }
+  
+  
+/* Responsif */
+@media (max-width: 768px) {
+    .earnings-history {
+        flex-direction: column;
+    }
+    .earnings-column, .history {
+        flex: 1; /* Sama rata */
+    }
+}
